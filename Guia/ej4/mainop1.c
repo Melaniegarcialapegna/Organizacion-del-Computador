@@ -20,7 +20,7 @@ int main() {
     node_t* cabeza = nodo1;
 
     // Probar la función valorEn
-    int32_t valor = valorEn(0, nodo1);
+    int32_t valor = valorEn(2, cabeza);
     printf("El valor es: %d \n", valor);
 
     // Liberar memoria
