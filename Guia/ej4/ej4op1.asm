@@ -1,6 +1,5 @@
 section .text
 global valorEn
-extern malloc
 
 valorEn:
     push rbp
