@@ -11,7 +11,7 @@ int main(void){
     return 0;
 }
 
-//PONER EL SECTION.TEXT AL PRINCIPIO DEL ASM
+//PONER EL SECTION.TEXT AL PRINCIPIO DEL ASM -> Como maca
 
 //Ejecutar:
 
