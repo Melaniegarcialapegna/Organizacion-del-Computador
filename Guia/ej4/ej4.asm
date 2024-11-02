@@ -1,3 +1,4 @@
+section .text
 global agregarAdelante_asm
 extern malloc
 
@@ -25,7 +26,7 @@ agregarAdelante_asm:
     ;Obs-> Las partes bajas de los DATOS se guardan en las posiciones bajas de MEMORIA
 
     mov [rax], r14 ; le pasamos el nodo   
-    shl r12, 32 ; shifteamos 4bytes a la izq
+    ;shl r12, 32 ; shifteamos 4bytes a la izq
     mov [rax+8], r12 ;rax+8 -> para ir a la prox pos (MEMORIA ES DIRECCIONABLE A NIVEL BYTE)-> para bajar + 8 pq alineada a 8
     
     ;el RAX ya es el puntero al nodo (al primer byte) , asi q ya se esta dev eso
