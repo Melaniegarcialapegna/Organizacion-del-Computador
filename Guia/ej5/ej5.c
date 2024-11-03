@@ -3,6 +3,8 @@
 str_array_t *strArrayNew(uint8_t capacity){
     str_array_t *arrNuevo = malloc(sizeof(str_array_t));
     arrNuevo->capacity = capacity;
+    arrNuevo->size=0;
+    arrNuevo->data= malloc(sizeof(char*)*capacity); //es un puntero a un arreglo en el cual cada casilla tiene unn puntero a un arreglo de char* (ver dibujito notion)
     return arrNuevo;
 }
 
@@ -22,25 +24,26 @@ char* strArrayRemove(str_array_t* a, uint8_t i){
     if (i >= a->size){
         return NULL;
     }
-    char *borrado = malloc(sizeof(char));//malloc pq nos pide que devolvamos un puntero
-    borrado = a->data[i];
+    char *borrado = a->data[i];
     //Meanie/0
     // a[i] = a[i+1]
     // if a[i] == "\0"{
     //     break;
     // }
-    while (a->data[i] != "\0"){
-        a[i] = a[i+1];
-        i++;
+    for (uint8_t j = i; j < a->size - 1; j++) {
+        a->data[j] = a->data[j + 1];
     }
+    a->size--;
     return borrado;
 }
 
 
 void strArrayDelete(str_array_t* a){
-    int32_t cont = 0;
-
-    
-
-    free(a);
+    if (a) {
+        for (uint8_t i = 0; i < a->size; i++) {
+            free(a->data[i]);
+        }
+        free(a->data);
+        free(a);
+    }
 }

@@ -5,6 +5,7 @@
         "mainop1.h": "c",
         "array": "c",
         "string": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "ej5.h": "c"
     }
 }
