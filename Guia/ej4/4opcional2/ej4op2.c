@@ -4,7 +4,7 @@
 
 
 void destruirLista(node_t* cabeza){
-    node_t *nodoSiguiente = malloc(sizeof(node_t))
+    node_t *nodoSiguiente = malloc(sizeof(node_t));
     while(cabeza != NULL){
         nodoSiguiente = cabeza->siguiente;
         free(cabeza);
