@@ -1,0 +1,6 @@
+FUNCION 1:
+bl : argumento capacity
+r14 : puntero al arrNuevo
+
+FUNCION 2:
+rdi : argumento a -> str_array*
