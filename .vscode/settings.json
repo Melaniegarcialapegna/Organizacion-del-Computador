@@ -6,6 +6,7 @@
         "array": "c",
         "string": "c",
         "string_view": "c",
-        "ej5.h": "c"
+        "ej5.h": "c",
+        "main.h": "c"
     }
 }
