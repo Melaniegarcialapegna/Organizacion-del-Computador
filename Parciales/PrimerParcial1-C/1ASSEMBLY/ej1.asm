@@ -18,7 +18,6 @@ arrayMap:
     push r14
     push r15
     push r13
-    
 
     mov r12 ,rdi ; r12 : array_t
     mov r14, rsi ; r14 : funcion a aplicar
@@ -31,7 +30,6 @@ arrayMap:
     mov DWORD r8d, [r12] ; r8: array->type
     mov BYTE cl, [r12+ARRAY_T_OFF_SIZE] ; r9 array->size
     mov BYTE dl, [r12+ARRAY_T_OFF_CAPACITY] ;r10 array-> capacity
-    
 
     ;inicializamos valores del nuevoArr (linea 6-8)
     mov DWORD [r15] , r8d
@@ -57,6 +55,7 @@ arrayMap:
         
 
     .finWhile:
+
 
 
     pop r13
