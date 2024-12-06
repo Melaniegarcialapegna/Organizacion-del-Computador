@@ -40,14 +40,13 @@ arrayMap:
     mov rax ,SIZE_VOID_ASTERISCO
     mul [r12+ARRAY_T_OFF_SIZE]
     ;rax : sizeof(void*)*(nuevoArr->capacity)
-    
 
     ; le asignamos la data
     mov rdi , rax
     call malloc ; en rax tenemos la data
     mov [r15+ARRAY_T_OFF_DATA], rax ; nuevoArr->data 
 
-    mov r13, 0 ; contador
+    mov r13, 0;contador
     
     .while:
         cmp r13 ,[r15+ARRAY_T_OFF_SIZE]
