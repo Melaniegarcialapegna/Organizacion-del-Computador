@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "cstdint": "c",
+        "cachesim.h": "c",
+        "string.h": "c"
+    }
+}
