@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//
 // Función para obtener el índice de la letra (A=0, B=1, ..., Z=25)
 int ord(char c) {
     return c - 'A';
